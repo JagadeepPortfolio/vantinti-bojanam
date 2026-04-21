@@ -1362,7 +1362,19 @@
     .topbar-veg { display: none; }
     .frame-content { left: 5%; right: 5%; max-width: 100%; }
     .progress-rail { display: none; }
-    .muggu-rail { display: none; }
+
+    /* Muggu rails stay visible on mobile, scaled down + pulled to the edge */
+    .muggu-rail {
+      width: 22px;
+      left: 4px;
+      opacity: 0.8;
+    }
+    .muggu-rail.muggu-rail-right {
+      left: auto;
+      right: 4px;
+    }
+    .muggu-rail .rail-thread { stroke-width: 1; opacity: 0.5; }
+    .muggu-rail .rail-progress { stroke-width: 1.4; }
     .muggu-corner { width: 54px; height: 54px; opacity: 0.3; }
     .muggu-corner.tl, .muggu-corner.tr { top: 60px; }
     .frame:not(.frame-split):not(.frame-trail)::before {
